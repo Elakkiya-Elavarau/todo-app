@@ -1,0 +1,19 @@
+ {% extends 'base/main.html' %}
+{% block content %}
+ 
+ <h1>Task Details</h1>
+
+    <h2>{{ object.title }}</h2>
+    <p><strong>Description:</strong> {{ object.description }}</p>
+    <p><strong>Completed:</strong> 
+        {% if object.complete %}
+            ✅ Yes
+        {% else %}
+            ❌ No
+        {% endif %}
+    </p>
+    <p><strong>Created at:</strong> {{ object.created_at }}</p>
+
+    <a href="/">🔙 Back to Task List</a>
+
+    {% endblock content %}
